@@ -37,6 +37,15 @@ resource "azurerm_container_app" "container-app" {
   container_app_environment_id = azurerm_container_app_environment.cae.id
   resource_group_name          = azurerm_resource_group.rg.name
   revision_mode                = "Single"
+  ingress {
+    external_enabled = true
+    target_port = 80
+    transport = "http"
+    traffic_weight {
+      percentage = 100
+      latest_revision = true
+    }
+  }
 
   template {
     container {
