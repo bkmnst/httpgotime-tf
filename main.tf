@@ -6,10 +6,10 @@ terraform {
     }
   }
   backend "azurerm" {
-    resource_group_name = "terraform"
+    resource_group_name  = "terraform"
     storage_account_name = "petyagrigoret"
-    container_name = "tfstate"
-    key = "terraform.tfstate"
+    container_name       = "tfstate"
+    key                  = "terraform.tfstate"
   }
 }
 
@@ -45,10 +45,10 @@ resource "azurerm_container_app" "container-app" {
   revision_mode                = "Single"
   ingress {
     external_enabled = true
-    target_port = 80
-    transport = "http"
+    target_port      = 80
+    transport        = "http"
     traffic_weight {
-      percentage = 100
+      percentage      = 100
       latest_revision = true
     }
   }
