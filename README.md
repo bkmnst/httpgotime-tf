@@ -1,0 +1,1 @@
+terraform module for deploying [spooky-scary](https://github.com/bkmnst/httpgotime) app
