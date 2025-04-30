@@ -14,7 +14,7 @@ provider "azurerm" {
 
 resource "azurerm_resource_group" "rg" {
   name     = "httpgotime-rg"
-  location = "West Europe"
+  location = "Poland Central"
 }
 
 resource "azurerm_log_analytics_workspace" "law" {
